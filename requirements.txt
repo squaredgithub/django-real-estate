@@ -17,6 +17,7 @@ PyJWT==2.1.0
 pytest-django==4.4.0
 pytest-factoryboy==2.1.0
 Faker==8.9.1
+pytest-cov==2.12.1
 # pytest-cov==2.12.1
 # redis==3.5.3
 # celery==4.4.7
