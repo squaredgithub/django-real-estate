@@ -1,0 +1,22 @@
+# ARG NODE_VERSION=16.14-alpineARG NODE_VERSION=16.14-alpine
+
+# FROM node:${NODE_VERSION} as node
+
+# FROM node as client-local-build
+
+# ARG AP${APP_HOME}
+FROM node:16-alpine3.12
+
+
+LABEL version="1.0"
+LABEL description="React Frontend for the Real Estate API"
+
+WORKDIR ${APP_HOME}
+
+COPY ./package*.json ./
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "run", "start"]
